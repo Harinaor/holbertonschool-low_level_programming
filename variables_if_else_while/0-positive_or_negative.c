@@ -5,7 +5,8 @@
 
 /* betty style doc for function main goes there */
 
-/* main - generates a random number and prints if it is positive, negative, or zero */
+/* main - generates a random number and prints if it is positive,
+ * negative, or zero */
 int main(void)
 {
 	int n;
