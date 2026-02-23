@@ -1,7 +1,2 @@
 #!/bin/bash
-char c_file_name;
-c_file_name=$CFILE
-int main( $CFILE)
-{
-    return (0);
-}
+c=$CFILE
