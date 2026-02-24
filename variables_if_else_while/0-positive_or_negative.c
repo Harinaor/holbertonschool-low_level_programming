@@ -3,7 +3,7 @@
 #include <time.h>
 
 /*
- * main - generates a random number and prints if it +, - ou =0
+ * main - generates a random number and prints him positive, negative, or zero
  *
  * Return: 0
  */
