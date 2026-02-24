@@ -4,6 +4,7 @@
 
 /**
  * main - calcul last digit of ramdom number and print whether
+ 
  * number is greater than 5 or is 0 or is less than 6 and  not 0
  */
 int main(void)
