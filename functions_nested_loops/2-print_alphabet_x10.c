@@ -19,8 +19,8 @@ int y;
 		for (x = 'a'; x <= 'z'; x++)
 			{
 			_putchar(x);
-			_putchar('\n');
 			}
+	_putchar('\n');
 	}
 /* Troisième et dernier putchar pour le saut de ligne */
 
