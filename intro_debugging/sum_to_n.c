@@ -3,7 +3,7 @@
 /**
  * sum_to_n - Somme des nombres de 1 à 11
  * @n: compteur de sommes
- * Return: n
+ * Return: sum
  */
 int sum_to_n(int n)
 {
@@ -12,7 +12,7 @@ int sum = 0;
 
 for (i = 1; i < n; i++)
 sum += i;
-return (n);
+return (sum);
 }
 
 /**
