@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+/**
+ * print_table - affiche une table de multiplication
+ * @size: taille de la table
+ */
+void print_table(int size)
+{
+int row, col;
+for (row = 1; row <= size; row++)
+{
+for (col = 1; col <= size; col++)
+{
+printf("%d ", row * col);
+}
+printf("\n");
+}
+}
+
+/**
+ * main - affiche la table de multiplication obtenue
+ *
+ * Return: 0 (succes)
+ */
+/* -- DO NOT Modify the code below this line -- */
+int main(void)
+{
+print_table(4);
+return (0);
+}
