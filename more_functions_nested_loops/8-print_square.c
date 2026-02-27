@@ -11,7 +11,7 @@ int line;
 
 if (size <= 0)
 _putchar('\n');
-else 
+else
 for (column = 0 ; column < size ; column++)
 {
 for (line = 0 ; line < size ; line++)
