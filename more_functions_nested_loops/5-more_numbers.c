@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * more_numbers - affiche 10 fois les nombres
  * de 0 à 14 suivi d'une nouvelle ligne
@@ -7,15 +8,18 @@
  */
 void more_numbers(void)
 {
-int x;
-int y;
+int ligne, num;
 
-for (x = 0 ; x <= 10; x++)
+for (ligne = 0; ligne < 10; ligne++)
 {
-for (y = 0 ; y <= 14; y++)
+for (num = 0; num <= 14; num++)
 {
-_putchar (y);
+if (num > 9)
+{
+_putchar((num / 10) + '0');
 }
-_putchar ('\n');
+_putchar((num % 10) + '0');
+}
+_putchar('\n');
 }
 }
