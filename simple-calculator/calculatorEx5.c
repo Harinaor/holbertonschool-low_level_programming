@@ -39,7 +39,6 @@ return (0);
 int addition(int a, int b);
 int substract(int a, int b);
 int multiply(int a, int b);
-int divide(int a, int b);
 
 int boucle_menu(void)
 {
@@ -65,10 +64,6 @@ substract(0, 0);
 else if (tiroir == 3)
 {
 multiply(0, 0);
-}
-else if (tiroir == 4)
-{
-divide(0, 0);
 }
 else if (tiroir < 0 || tiroir >= 5)
 printf("Invalid choice %d \n", tiroir);
@@ -178,50 +173,5 @@ void afficher_mul(int mul)
 {
 {
 printf("le résultat est %d \n", mul);
-}
-}
-
-/**
- * divide - diviser deux entiers entrés par l'utilisateur
- *
- * Return: le quotient des deux entiers
- */
-
- /*Programme 5 : Division*/
-int boucle_menu(void);
-void afficher_div(int div);
-
-
-/*calculer la division*/
-int divide(int a, int b)
-{
-
-printf("Enter your first number value \n a = ");
-(scanf("%d", &a));
-printf("Enter your second number value \n b = ");
-(scanf("%d", &b));
-if (b == 0)
-{
-printf("Error \n");
-return (0);
-}
-else
-{
-afficher_div(a / b);
-return (a / b);
-}
-}
-
-/**
- * afficher_div - afficher la division
- * @div: division de deux entiers
- * Return: affiche la division des deux entiers
- */
-
-/*Afficher la division*/
-void afficher_div(int div)
-{
-{
-printf("le résultat est %d \n", div);
 }
 }
