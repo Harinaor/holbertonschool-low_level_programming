@@ -32,13 +32,14 @@ return (0);
  * un compteur @i: sert à itérer les boucles du menu
  * @a: premier entier pour les opérations
  * @b: deuxième entier pour les opérations
+ * @c: premier entier pour les opérations de soustraction
+ * @d: deuxième entier pour les opérations de soustraction
  * Return: 0
  */
 
  /*Programme 2 : Boucle de menu de calculatrice*/
 int addition(int a, int b);
-int substract(int a, int b);
-int multiply(int a, int b);
+int substract(int c, int d);
 
 int boucle_menu(void)
 {
@@ -60,10 +61,6 @@ addition(0, 0);
 else if (tiroir == 2)
 {
 substract(0, 0);
-}
-else if (tiroir == 3)
-{
-multiply(0, 0);
 }
 else if (tiroir < 0 || tiroir >= 5)
 printf("Invalid choice %d \n", tiroir);
@@ -116,15 +113,15 @@ void afficher_sub(int sub);
 
 
 /*calculer la soustraction*/
-int substract(int a, int b)
+int substract(int c, int d)
 {
 
 printf("Enter your first number value \n c = ");
-(scanf("%d", &a));
-printf("Enter your second number value \n b = ");
-(scanf("%d", &b));
-afficher_sub(a - b);
-return (a - b);
+(scanf("%d", &c));
+printf("Enter your second number value \n d = ");
+(scanf("%d", &d));
+afficher_sub(c - d);
+return (c - d);
 }
 /**
  * afficher_sub - afficher la soustraction
@@ -137,41 +134,5 @@ void afficher_sub(int sub)
 {
 {
 printf("le résultat est %d \n", sub);
-}
-}
-
-/**
- * multiply - multiplier deux entiers entrés par l'utilisateur
- *
- * Return: le produit des deux entiers
- */
-
- /*Programme 5 : Multiplication*/
-int boucle_menu(void);
-void afficher_mul(int mul);
-
-
-/*calculer la multiplication*/
-int multiply(int a, int b)
-{
-
-printf("Enter your first number value \n a = ");
-(scanf("%d", &a));
-printf("Enter your second number value \n b = ");
-(scanf("%d", &b));
-afficher_mul(a * b);
-return (a * b);
-}
-/**
- * afficher_mul - afficher la multiplication
- * @mul: multiplication de deux entiers
- * Return: affiche la multiplication des deux entiers
- */
-
-/*Afficher la multiplication*/
-void afficher_mul(int mul)
-{
-{
-printf("le résultat est %d \n", mul);
 }
 }
