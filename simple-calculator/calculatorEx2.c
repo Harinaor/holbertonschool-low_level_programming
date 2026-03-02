@@ -34,8 +34,6 @@ return (0);
  */
 
  /*Programme 2 : Boucle de menu de calculatrice*/
-int addition(int a, int b);
-
 int boucle_menu(void)
 {
 int tiroir;
@@ -49,45 +47,10 @@ if (tiroir == 0)
 printf("Bye \n");
 exit(0);
 }
-else if (tiroir == 1)
-{
-addition(0, 0);
-}
 else if (tiroir < 0 || tiroir >= 5)
 printf("Invalid choice %d \n", tiroir);
 else
 printf("the option selected: %d \n", tiroir);
 }
 return (0);
-}
-/**
- * addition - additionner deux entiers entrés par l'utilisateur
- *
- * Return: la somme des deux entiers
- */
-
- /*Programme 3 : Addition*/
-int boucle_menu(void);
-void afficher_sum(int sum);
-
-/*caluculer la somme*/
-int addition(int a, int b)
-{
-printf("Enter your first number value \n a = ");
-(scanf("%d", &a));
-printf("Enter your second number value \n b = ");
-(scanf("%d", &b));
-afficher_sum(a + b);
-return (a + b);
-}
-/**
- * afficher_sum - afficher la somme
- * @sum: somme des deux entiers
- * Return: affiche la somme des deux entiers
- */
-
-/*Afficher la somme*/
-void afficher_sum(int sum)
-{
-printf("le résultat est %d \n", sum);
 }
