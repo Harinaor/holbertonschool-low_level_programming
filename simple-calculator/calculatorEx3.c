@@ -30,20 +30,15 @@ return (0);
  * boucle_menu - répéter le menu jusqu'à la commande 0 pour exit
  * Les données @tiroir: sert à repérer les entrées invalides
  * un compteur @i: sert à itérer les boucles du menu
- * @a: premier entier pour les opérations
- * @b: deuxième entier pour les opérations
- * @c: premier entier pour les opérations de soustraction
- * @d: deuxième entier pour les opérations de soustraction
  * Return: 0
  */
 
  /*Programme 2 : Boucle de menu de calculatrice*/
 int addition(int a, int b);
-int substract(int c, int d);
 
 int boucle_menu(void)
 {
-int tiroir = -1;
+int tiroir;
 
 while (tiroir != 0)
 {
@@ -57,10 +52,6 @@ exit(0);
 else if (tiroir == 1)
 {
 addition(0, 0);
-}
-else if (tiroir == 2)
-{
-substract(0, 0);
 }
 else if (tiroir < 0 || tiroir >= 5)
 printf("Invalid choice %d \n", tiroir);
@@ -99,40 +90,4 @@ return (a + b);
 void afficher_sum(int sum)
 {
 printf("le résultat est %d \n", sum);
-}
-
-/**
- * substract - soustraire deux entiers entrés par l'utilisateur
- *
- * Return: la soustraction des deux entiers
- */
-
- /*Programme 4 : Soustraction*/
-int boucle_menu(void);
-void afficher_sub(int sub);
-
-
-/*calculer la soustraction*/
-int substract(int c, int d)
-{
-
-printf("Enter your first number value \n c = ");
-(scanf("%d", &c));
-printf("Enter your second number value \n d = ");
-(scanf("%d", &d));
-afficher_sub(c - d);
-return (c - d);
-}
-/**
- * afficher_sub - afficher la soustraction
- * @sub: soustraction de deux entiers
- * Return: affiche la soustraction des deux entiers
- */
-
-/*Afficher la soustraction*/
-void afficher_sub(int sub)
-{
-{
-printf("le résultat est %d \n", sub);
-}
 }
