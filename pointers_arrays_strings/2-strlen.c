@@ -3,7 +3,7 @@
 /**
  * _strlen - Ecrire une fonction qui renvoi la longueur
  * d'une chaîne de caractères
- * @s: J'ai modélisé ça par mario qui marche
+ * @s: J'ai modélisé ça par mario (pointeur) *s qui marche
  * sur des blocs au dessus de la lave
  * quand mario tombe sur le bloc vide,
  * c'est équivalent à la longueur des blocs parcouru
