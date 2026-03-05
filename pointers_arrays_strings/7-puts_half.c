@@ -26,7 +26,7 @@ while (str[length] != '\0')
 {
 length++;
 }
-/* La boucle for fait parcourir *str */ 
+/* La boucle for fait parcourir *str */
 /* et permet de calculer sa longueur length */
 if (length % 2 == 0)
 j = length / 2;
