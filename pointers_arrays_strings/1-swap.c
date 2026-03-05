@@ -1,5 +1,5 @@
 /**
- * ecrire une fonction qui échange la valeur de 2 entiers
+ * swap_int - ecrire une fonction qui échange la valeur de 2 entiers
  * @a: entier n°1
  * @b: entier n°2
  * Return: les entiers échangés
