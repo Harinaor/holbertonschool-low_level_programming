@@ -20,31 +20,13 @@ while (dest[i] != '\0')
 i++;
 }
 
-while (src[j] != '\0')
-{
-if (j >= n)
+while (src[j] != '\0' && j < n)
 {
 dest[i] = src[j];
 i++;
 j++;
-dest[i] = n;
-printf("la valeur de i est %d \n", i);
-printf("la valeur de dest[i] est %d \n", dest[i]);
-printf("la valeur de n est %d \n", n);
-printf("la valeur de j est %d \n", j);
-}
-else
-{
-dest[i] = src[j];
-i++;
-j++;
-printf("la valeur de i est %d \n", i);
-printf("la valeur de dest[i] est %d \n", dest[i]);
-printf("la valeur de j est %d \n", j);
-}
 }
 dest[i] = '\0';
 
 return (dest);
 }
-
