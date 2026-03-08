@@ -3,8 +3,8 @@
 /**
  * _strcmp - ecrit une fonction qui compare 2 chaines
  * @s1: chaine 1
- * @s2: chaine 2 
- * Return < 0 si s1 < s2, 0 si s1 == s2, > 0 si s1 > s2
+ * @s2: chaine 2
+ * Return: s1[i] - s2[i]
  */
 
 int _strcmp(char *s1, char *s2)
