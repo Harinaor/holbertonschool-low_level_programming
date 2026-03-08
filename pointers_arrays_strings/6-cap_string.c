@@ -1,12 +1,9 @@
 #include "main.h"
 
 /**
- * cap_string - ecrit une fonction qui met en majuscule
- *
- * la première lettre de chaque mot d'une chaine
- * @s: une chaine
- * Return: string avec des Majuscules à chaque mots sans les séparateurs
- *
+ * *cap_string - met les première lettres en majuscule
+ * @s: une chaine
+ * Return: la chaine avec les premières lettres majuscules
  */
 char *cap_string(char *s)
 {
