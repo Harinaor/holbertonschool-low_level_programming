@@ -5,35 +5,37 @@
 /**
  * *_strdup - duplique une chaine de la mémoire en lecture seule
  * vers la mémoire HEAP caractère par caractère
- * @str: l'adresse de la chaine
- * Return: ptr
+ * @str: la chaine à dupliquer
+ * et contenant une copie de la chaine de caractère passée en paramètre
+ * Return: ptr le poiteur de la copie allouée sur le HEAP
  */
 
 char *_strdup(char *str)
 {
-char *ptr = NULL;
+char *dup = NULL;
 int i = 0;
 int n = 0;
 
-if (ptr == NULL)
+if (str == NULL)
+{
 return (NULL);
+}
 
 while (str[n] != '\0')
 n++;
 
 n++;
-
- char *s = malloc(1024);  
-if (!s) {
-return 1;
-}
-if (ptr == NULL)
+/* la mémoire nécessaire est alloué avec malloc par l'OS*/
+dup = malloc(n *sizeof(char));
+if (!dup)
+return (NULL);
+if (str == NULL)
 return (NULL);
 
 for (i = 0; str[i] != '\0'; i++)
 {
-ptr[i] = str[i];
+dup[i] = str[i];
 }
-ptr[i] = '\0';
-return (ptr);
+dup[i] = '\0';
+return (dup);
 }
