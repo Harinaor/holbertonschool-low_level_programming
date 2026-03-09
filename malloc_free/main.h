@@ -38,5 +38,6 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *);
 char *cap_string(char *s);
 char *create_array(unsigned int size, char c);
+char *_strdup(char *str);
 
 #endif
