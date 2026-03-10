@@ -1,5 +1,20 @@
-Write a function that allocates memory using malloc.
+/**
+ * *malloc_checked - Ecrire une fonction qui loue de la mémoire avec malloc
+ * 
+ * Return: mem un pointer vers la mémoire allouée
+ */
 
-Prototype: void *malloc_checked(unsigned int b);
-Returns a pointer to the allocated memory
-if malloc fails, the malloc_checked function should cause normal process termination with a status value of 98
+void *malloc_checked(unsigned int b)
+{
+/*STACK*/
+
+/*HEAP*/
+
+
+/*si malloc échoue, malloc_checked doit causer*/ 
+/*une fin de process avec une valeur status de 98*/
+if (malloc == NULL)
+return(98);
+
+return(mem);
+}
