@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib>
+#include <stdlib.h>
 
 /**
  * *malloc_checked - Ecrire une fonction qui alloue de la mémoire avec malloc
@@ -14,10 +14,10 @@ void *mem;
 /*HEAP*/
 mem = malloc(b);
 
-/*si malloc échoue, malloc_checked doit causer*/ 
+/*si malloc échoue, malloc_checked doit causer*/
 /*une fin de process avec une valeur status de 98*/
 if (mem == NULL)
 exit(98);
 
-return(mem);
+return (mem);
 }
