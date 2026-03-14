@@ -1,4 +1,4 @@
-#include "dog.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,15 +12,27 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *dog_t;
-/* Si la fonction échoue return: NULL*/
-	dog_t = malloc(sizeof(dog_t));
-	if (dog_t == NULL)
+	dog_t *my_dog;
+	/* Si la fonction échoue return: NULL*/
+	my_dog = malloc(sizeof(dog_t));
+	if (my_dog == NULL)
 		return (NULL);
 
-	dog_t->name = name;
-	dog_t->age = age;
-	dog_t->owner = owner;
+	my_dog->name = _strdup(name);
+	if (my_dog->name == NULL)
+	{
+		free(my_dog);
+		return (NULL);
+	}
 
-	return (dog_t);
+	my_dog->owner = _strdup(owner);
+	if (my_dog->owner == NULL)
+	{
+	free(my_dog->name);
+	free(my_dog);
+	return (NULL);
+	}
+	my_dog->age = age;
+
+	return (my_dog);
 }
