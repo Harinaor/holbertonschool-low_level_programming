@@ -1,41 +1,65 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include "dog.h"
 
-/**
- * *new_dog - une fonction qui crée un nouveau chien
- * @name: nom du chien
- * @age: age du chien
- * @owner: propriétaire du chien
- * Return: NULL si la fonction échoue
- */
+int _strlen(char *s)
+{
+    int i = 0;
+
+    while (s && s[i])
+        i++;
+
+    return (i);
+}
+
+char *_copy(char *s)
+{
+    int i, len;
+    char *p;
+
+    if (s == NULL)
+        return (NULL);
+
+    len = _strlen(s);
+
+    p = malloc(sizeof(char) * (len + 1));
+    if (p == NULL)
+        return (NULL);
+
+    for (i = 0; i < len; i++)
+        p[i] = s[i];
+
+    p[len] = '\0';
+
+    return (p);
+}
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *my_dog;
+    dog_t *dog;
 
-	if (name == NULL || owner == NULL)
-    return (NULL);
-	/* Si la fonction échoue return: NULL*/
-	my_dog = malloc(sizeof(dog_t));
-	if (my_dog == NULL)
-		return (NULL);
+    if (name == NULL || owner == NULL)
+        return (NULL);
 
-	my_dog->name = _strdup(name);
-	if (my_dog->name == NULL)
-	{
-		free(my_dog);
-		return (NULL);
-	}
+    dog = malloc(sizeof(dog_t));
+    if (dog == NULL)
+        return (NULL);
 
-	my_dog->owner = _strdup(owner);
-	if (my_dog->owner == NULL)
-	{
-	free(my_dog->name);
-	free(my_dog);
-	return (NULL);
-	}
-	my_dog->age = age;
+    dog->name = _copy(name);
+    if (dog->name == NULL)
+    {
+        free(dog);
+        return (NULL);
+    }
 
-	return (my_dog);
+    dog->owner = _copy(owner);
+    if (dog->owner == NULL)
+    {
+        free(dog->name);
+        free(dog);
+        return (NULL);
+    }
+
+    dog->age = age;
+
+    return (dog);
 }
