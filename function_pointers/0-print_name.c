@@ -10,13 +10,10 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-
+/*vérifier ce qui retourne NULL*/
 if (name == NULL || f == NULL)
 	return;
-
-f(name);
 /*le pointeur f est déjà déclaré*/
 /*l'assigner à print_name*/
-f = print_name_as_is;
-f = print_name_uppercase;
+f(name);
 }
