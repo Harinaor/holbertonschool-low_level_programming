@@ -7,5 +7,5 @@
 typedef struct op
 {
     char *op;
-    int (*f)(int a, int b);
+    int (*f)(int num1, int num2);
 } op_t;
